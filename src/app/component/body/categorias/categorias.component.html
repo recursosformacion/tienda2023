@@ -1,0 +1,78 @@
+<div class="e-tabs mb-3 px-3">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link active" href="#">Categorias</a></li>
+    </ul>
+</div>
+
+<div class="row flex-lg-nowrap">
+    <div class="col mb-3">
+        <div class="e-panel card">
+            <div class="card-body">
+                <div class="card-title">
+                    <h6 class="mr-2"><span>Listado de categorias</span></h6>
+                </div>
+                <div class="e-table">
+                    <div class="table-responsive table-lg mt-3">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="align-top">
+                                        <div
+                                            class="custom-control custom-control-inline custom-checkbox custom-control-nameless m-0">
+                                            <input type="checkbox" class="custom-control-input" id="all-items">
+                                            <label class="custom-control-label" for="all-items"></label>
+                                        </div>
+                                    </th>
+                                    <th>Photo</th>
+                                    <th class="max-width">Name</th>
+                                    <th class="sortable">Date</th>
+                                    <th> </th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let categoria of listado" >
+                                    <td class="align-middle">
+                                        <div
+                                            class="custom-control custom-control-inline custom-checkbox custom-control-nameless m-0 align-top">
+                                            <input type="checkbox" class="custom-control-input" id="item-1">
+                                            <label class="custom-control-label" for="item-1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="bg-light d-inline-flex justify-content-center align-items-center align-top"
+                                            style="width: 35px; height: 35px; border-radius: 3px;"><i
+                                                class="fa fa-fw fa-photo" style="opacity: 0.8;"></i></div>
+                                    </td>
+                                    <td class="text-nowrap align-middle">{{categoria.cat_nombre}}</td>
+                                    <td class="text-nowrap align-middle">{{categoria.cat_descripcion}}</td>
+                                    <td class="text-center align-middle"><i
+                                            class="fa fa-fw text-secondary cursor-pointer fa-toggle-on"></i></td>
+                                    <td class="text-center align-middle">
+                                        <div class="btn-group align-top">
+                                            <a routerLink="/formCategoria/+{{categoria.id_categoria}}/act">Act</a>$nbsp;
+                                            <a routerLink="/formCategoria/+{{categoria.id_categoria}}/del">Del</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <ul class="pagination mt-3 mb-0">
+                            <li class="disabled page-item"><a href="#" class="page-link">‹</a></li>
+                            <li class="active page-item"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">4</a></li>
+                            <li class="page-item"><a href="#" class="page-link">5</a></li>
+                            <li class="page-item"><a href="#" class="page-link">›</a></li>
+                            <li class="page-item"><a href="#" class="page-link">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

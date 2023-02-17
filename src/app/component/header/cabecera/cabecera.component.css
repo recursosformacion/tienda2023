@@ -1,0 +1,9 @@
+.titulo {
+    display: flex;
+  }
+.titulo h1{
+  margin: auto;
+}
+.titulo fecha{
+  margin-right: 0;
+}

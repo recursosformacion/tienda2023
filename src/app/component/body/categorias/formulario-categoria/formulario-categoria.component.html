@@ -1,0 +1,36 @@
+<h5 class="modal-title">{{boton}} Categoria</h5>
+
+<form class="form" novalidate="" #form="ngForm" >
+  <div class="row">
+    <div class="form-group">
+      <label>Id. categoria</label>
+      <input class="form-control" type="number"  [(ngModel)]="categoria.id_categoria" name="id_categoria"
+        readonly="true">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <label>Nombre categoria</label>
+      <input class="form-control" type="text"  placeholder="Nombre categoria"
+        [(ngModel)]="categoria.cat_nombre" name="cat_nombre" [readonly]="soloLectura">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <label>Descripcion categoria</label>
+      <textarea class="form-control" rows="5" placeholder="Descripcion categoria" 
+        [(ngModel)]="categoria.cat_descripcion" name="cat_descripcion" [readonly]="soloLectura"></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col d-flex justify-content-end">
+      <button class="btn btn-primary" type="submit" (click)="deFormulario(opcion)">{{boton}}</button>
+    </div>
+    <div class="col d-flex justify-content-end">
+      <button class="btn btn-secondary" type="cancel"(click)="deFormulario(SALIR)">Cancelar</button>
+    </div>
+  </div>
+</form>
